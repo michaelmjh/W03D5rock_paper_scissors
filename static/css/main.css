@@ -89,7 +89,7 @@ footer {
 
 @keyframes p1_animation {
     0%   {left:0px; top:0px;}
-    100%  {left:-600px; top:0px;}
+    100%  {left:-1000px; top:0px;}
 }
 
 #player_2_image {
@@ -101,6 +101,6 @@ footer {
 
 @keyframes p2_animation {
     0%   {left:0px; top:0px;}
-    75%   {right:-600px; top:0px;}
-    100%  {right:-600px; top:0px;}
+    75%   {right:-1000px; top:0px;}
+    100%  {right:-1000px; top:0px;}
 }
