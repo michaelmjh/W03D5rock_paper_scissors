@@ -1,0 +1,32 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div  id="navigation_bar">
+    <nav>
+        <ul>
+            <li clas="navLink"><a href="/">Home</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="player_input">
+    <form action="/play" method="POST">
+        <label for="name">Enter your name:</label>
+        <br>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <br>
+        <label for="shape">Choose a shape:</label>
+        <br>
+        <select name="shape" id="shape">
+            <option value="Rock">Rock</option>
+            <option value="Paper">Paper</option>
+            <option value="Scissors">Scissors</option>
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Play">
+    </form>
+</div>
+
+{% endblock %}

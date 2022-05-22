@@ -1,0 +1,71 @@
+{% extends "template.html" %}
+
+{% block content %}
+<div  id="navigation_bar">
+    <nav>
+        <ul>
+            <li clas="navLink"><a href="/">Home</a></li>
+        </ul>
+    </nav>
+</div>
+
+<div id="results">
+    <div id="'player_1">
+        {% if players[0].name == "Computer" %}
+            <p>{{players[1].name}}</p>
+            {% if players[1].shape == "Rock" %}
+                <img id="player_1_image" src="https://lh3.googleusercontent.com/D1joulHUp3pb7bPH9fgUisql-su-8s2qXQOwkhoOmAkSzCbrpBVIby1Erp3vMS39zNjdMFtynzbBJmvw-_osFE0JMlKs4L3Q4A1-iw=w600" width="" height="400" alt="image">
+            {% elif players[1].shape == "Paper" %}
+                <img id="player_1_image" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/590d6ce38673e40.png" width="" height="400" alt="image">
+            {% elif players[1].shape == "Scissors" %}
+                <img id="player_1_image"src="https://art.pixilart.com/4b8b64abd8de405.png" width="" height="400" alt="image">
+            {% endif %}
+            
+        {% else %}
+            <p>{{players[0].name}}</p>
+            {% if players[0].shape == "Rock" %}
+                <img id="player_1_image" src="https://lh3.googleusercontent.com/D1joulHUp3pb7bPH9fgUisql-su-8s2qXQOwkhoOmAkSzCbrpBVIby1Erp3vMS39zNjdMFtynzbBJmvw-_osFE0JMlKs4L3Q4A1-iw=w600" width="" height="400" alt="image">
+            {% elif players[0].shape == "Paper" %}
+                <img id="player_1_image" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/590d6ce38673e40.png" width="" height="400" alt="image">
+            {% elif players[0].shape == "Scissors" %}
+                <img id="player_1_image" src="https://art.pixilart.com/4b8b64abd8de405.png" width="" height="400" alt="image">
+            {% endif %}
+        {% endif %}
+    </div>
+
+    <div id="vs">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/70/Street_Fighter_VS_logo.png" width="" height="" alt="image">
+    </div>
+
+    <div id="player_2">
+        {% if players[0].name == "Computer" %}
+            <p>{{players[0].name}}</p>
+            {% if players[0].shape == "Rock" %}
+                <img id="player_2_image" src="https://lh3.googleusercontent.com/D1joulHUp3pb7bPH9fgUisql-su-8s2qXQOwkhoOmAkSzCbrpBVIby1Erp3vMS39zNjdMFtynzbBJmvw-_osFE0JMlKs4L3Q4A1-iw=w600" width="" height="400" alt="image">
+            {% elif players[0].shape == "Paper" %}
+                <img id="player_2_image" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/590d6ce38673e40.png" width="" height="400" alt="image">
+            {% elif players[0].shape == "Scissors" %}
+                <img id="player_2_image" src="https://art.pixilart.com/4b8b64abd8de405.png" width="" height="400" alt="image">
+            {% endif %}
+        {% else %}
+            <p>{{players[1].name}}</p>
+            {% if players[1].shape == "Rock" %}
+                <img id="player_2_image" src="https://lh3.googleusercontent.com/D1joulHUp3pb7bPH9fgUisql-su-8s2qXQOwkhoOmAkSzCbrpBVIby1Erp3vMS39zNjdMFtynzbBJmvw-_osFE0JMlKs4L3Q4A1-iw=w600" width="" height="400" alt="image">
+            {% elif players[1].shape == "Paper" %}
+                <img id="player_2_image" src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/590d6ce38673e40.png" width="" height="400" alt="image">
+            {% elif players[1].shape == "Scissors" %}
+                <img id="player_2_image" src="https://art.pixilart.com/4b8b64abd8de405.png" width="" height="400" alt="image">
+            {% endif %}
+        {% endif %}
+    
+    </div>
+    <br>
+    <div id="outcome">
+        {% if winner != None %}
+            <p>{{winner.name}} wins!</p>
+        {% else %}
+            <p>It's a draw!</p>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
