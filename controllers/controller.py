@@ -40,5 +40,7 @@ def show_outcome():
 @app.route('/<shape_1>/<shape_2>')
 def rock_scissors(shape_1, shape_2):
     result = Game.play_basic(shape_1.title(), shape_2.title())
-    return "Player 1 wins by playing rock"
-
+    if result != None:
+        return result
+    else:
+        return "It's a draw"
